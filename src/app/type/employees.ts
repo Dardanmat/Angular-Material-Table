@@ -1,16 +1,31 @@
-import { Component } from '@angular/core';
-import { Employees } from './type/employees';
+export class Employees{
 
-@Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
-})
-export class AppComponent {
-  
-  displayedColumns: string[]=['id','firstName','lastName','gender','birthDate','hireDate'];
+    constructor(
+        public id?: number,
+        public firstName?: string,
+        public lastName?: string,
+        public gender?: string,
+        public birthDate?: string,
+        public hireDate?: string
+    ){
 
-  dataSource: Employees[] = [
+    }
+
+}
+
+
+/*import {Component} from '@angular/core';
+
+export interface data {
+  id: number;
+  firstName: string;
+  lastName: string;
+  gender: string;
+  birthDate: string;
+  hireDate: string;
+}
+
+const employees: data[] = [
     {
       "id": 10001,
       "birthDate": "1953-09-01",
@@ -55,4 +70,12 @@ export class AppComponent {
     }
   ];
 
-}
+@Component({
+    selector: 'Employee',
+    styleUrls: ['table-row-binding-example.css'],
+    templateUrl: 'table-row-binding-example.html',
+})
+export class TableRowBindingExample {
+displayedColumns: string[] = ['id', 'firstName', 'lastName', 'gender', 'birthDate', 'hireDate'];
+dataSource = employees;
+}*/
